@@ -119,6 +119,13 @@
                 padding: 0.5rem 1rem;
             }
         }
+
+        /* Estilo para el contador */
+        .contador {
+            font-size: 1.5rem;
+            color: #6A1B9A;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -127,12 +134,37 @@
 
     <div class="content-container">
         <p>Ya 8 meses juntos amorsito aunque ahora estemos a la distancia los regalitos se busca la forma para hacerlos :3 ojala te guste estuve pensando hacerla hace un tiempo y esta tiene un detallito especial muac</p>
+
+        <!-- Contenedor del contador -->
+        <div id="contador" class="contador"></div>
     </div>
 
     <!-- Botón fuera del fondo blanco -->
     <div class="button-container">
         <a href="hola.html">Ingresar a la Galería</a>
     </div>
+
+    <script>
+        // Fecha de inicio (7 de junio de 2024)
+        const fechaInicio = new Date("2024-06-07T00:00:00");
+
+        function actualizarContador() {
+            const ahora = new Date();
+            const diferencia = ahora - fechaInicio;
+
+            // Calculamos el tiempo transcurrido en días, horas, minutos y segundos
+            const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+            const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+            const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+            // Mostramos el contador en el HTML
+            document.getElementById("contador").innerHTML = `Han pasado ${dias} días, ${horas} horas, ${minutos} minutos`;
+        }
+
+        // Actualizar el contador cada segundo
+        setInterval(actualizarContador, 1000);
+    </script>
 
 </body>
 </html>
