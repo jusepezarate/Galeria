@@ -18,7 +18,7 @@
             align-items: center;
             height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
             text-align: center;
-            position: relative;
+            flex-direction: column; /* Alinea todos los elementos verticalmente */
         }
 
         @keyframes gradientBG {
@@ -86,45 +86,12 @@
             background-color: #4A148C;
         }
 
-        /* Media Queries para pantallas pequeñas */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem; /* Ajuste del tamaño del título */
-                top: 5%;
-            }
-
-            .content-container {
-                padding: 1.5rem; /* Reducir el espaciado en pantallas pequeñas */
-                max-width: 90%; /* Asegura que el contenedor ocupe el 90% del ancho */
-            }
-
-            p {
-                font-size: 1rem; /* Reducir el tamaño del texto en pantallas pequeñas */
-            }
-
-            .button-container a {
-                font-size: 1rem; /* Ajustar el tamaño del botón */
-                padding: 0.6rem 1.5rem; /* Reducir el tamaño del botón */
-            }
-        }
-
-        /* Media Queries para pantallas muy pequeñas */
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 1.5rem; /* Ajuste adicional para pantallas aún más pequeñas */
-            }
-
-            .button-container a {
-                font-size: 0.9rem; /* Reducir aún más el tamaño del botón */
-                padding: 0.5rem 1rem;
-            }
-        }
-
-        /* Estilo para el contador */
+        /* Estilo para el contador debajo del fondo blanco */
         .contador {
             font-size: 1.5rem;
             color: #6A1B9A;
             margin-top: 20px;
+            z-index: 1;
         }
     </style>
 </head>
@@ -134,10 +101,10 @@
 
     <div class="content-container">
         <p>Ya 8 meses juntos amorsito aunque ahora estemos a la distancia los regalitos se busca la forma para hacerlos :3 ojala te guste estuve pensando hacerla hace un tiempo y esta tiene un detallito especial muac</p>
-
-        <!-- Contenedor del contador -->
-        <div id="contador" class="contador"></div>
     </div>
+
+    <!-- Contenedor del contador, debajo del fondo blanco -->
+    <div id="contador" class="contador"></div>
 
     <!-- Botón fuera del fondo blanco -->
     <div class="button-container">
@@ -159,7 +126,7 @@
             const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
 
             // Mostramos el contador en el HTML
-            document.getElementById("contador").innerHTML = `Han pasado ${dias} días, ${horas} horas, ${minutos} minutos`;
+            document.getElementById("contador").innerHTML = `Hemos pasado ${dias} días, ${horas} horas, ${minutos} minutos juntos ♥️`;
         }
 
         // Actualizar el contador cada segundo
