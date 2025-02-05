@@ -8,7 +8,7 @@
         /* Fondo animado */
         body {
             margin: 0;
-            padding: 20px;
+            padding: 0;
             font-family: 'Georgia', serif;
             background: linear-gradient(-45deg, #F9E6F8, #EAB8E4, #D18BCF, #B85EB9);
             background-size: 400% 400%;
@@ -36,8 +36,8 @@
         /* Contenedor para el fondo blanco */
         .content-container {
             background-color: white; /* Fondo blanco */
-            padding: 40px 60px; /* Espaciado alrededor del texto */
-            border-radius: 15px; /* Bordes redondeados */
+            padding: 2rem 3rem; /* Espaciado alrededor del texto */
+            border-radius: 1rem; /* Bordes redondeados */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
             z-index: 0; /* Asegura que el fondo esté detrás del texto */
             position: relative; /* Necesario para el posicionamiento absoluto del texto */
@@ -47,42 +47,77 @@
 
         /* Estilos del texto flotante sobre el fondo blanco */
         h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
+            font-size: 2.5rem; /* Ajustado a un tamaño más pequeño por defecto */
+            margin-bottom: 1rem;
             color: #6A1B9A; /* Color de texto */
             position: absolute;
             top: 10%; /* Coloca el texto más arriba del centro */
             z-index: 1; /* Asegura que el texto esté sobre el fondo */
+            width: 100%; /* Asegura que el título se ajuste al contenedor */
         }
 
         p {
-            font-size: 1.5em;
+            font-size: 1.2rem; /* Tamaño de fuente más pequeño para pantallas pequeñas */
             color: #4A148C; /* Color de texto */
+            margin: 0;
         }
 
         /* Estilo para el botón fuera del fondo blanco */
         .button-container {
             position: absolute;
-            bottom: -40px; /* El botón estará fuera del fondo blanco */
+            bottom: -2rem; /* El botón estará fuera del fondo blanco */
             left: 50%;
             transform: translateX(-50%); /* Centra el botón horizontalmente */
-            margin-top: 20px;
             z-index: 2; /* Asegura que el botón esté sobre el fondo */
         }
 
         .button-container a {
             display: inline-block;
-            padding: 10px 20px;
+            padding: 0.8rem 2rem;
             background-color: #6A1B9A;
             color: #FFFFFF;
             text-decoration: none;
             border-radius: 25px;
-            font-size: 1.2em;
+            font-size: 1.2rem;
             transition: background-color 0.3s ease;
         }
 
         .button-container a:hover {
             background-color: #4A148C;
+        }
+
+        /* Media Queries para pantallas pequeñas */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem; /* Ajuste del tamaño del título */
+                top: 5%;
+            }
+
+            .content-container {
+                padding: 1.5rem; /* Reducir el espaciado en pantallas pequeñas */
+                max-width: 90%; /* Asegura que el contenedor ocupe el 90% del ancho */
+            }
+
+            p {
+                font-size: 1rem; /* Reducir el tamaño del texto en pantallas pequeñas */
+            }
+
+            .button-container a {
+                font-size: 1rem; /* Ajustar el tamaño del botón */
+                padding: 0.6rem 1.5rem; /* Reducir el tamaño del botón */
+            }
+        }
+
+        /* Media Queries para pantallas muy pequeñas */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem; /* Ajuste adicional para pantallas aún más pequeñas */
+            }
+
+            .button-container a {
+                font-size: 0.9rem; /* Reducir aún más el tamaño del botón */
+                padding: 0.5rem 1rem;
+            }
         }
     </style>
 </head>
