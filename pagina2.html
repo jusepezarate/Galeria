@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería Especial</title>
+    <style>
+        /* Fondo animado */
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: 'Georgia', serif;
+            background: linear-gradient(-45deg, #F9E6F8, #EAB8E4, #D18BCF, #B85EB9);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        h1 {
+            text-align: center;
+            color: #6A1B9A;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #4A148C;
+            font-size: 2em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        /* Estilos para la sección con fondo blanco en la parte superior */
+        .intro-container {
+            background-color: #FFFFFF; /* Fondo blanco */
+            border-radius: 10px; /* Bordes redondeados */
+            padding: 40px; /* Espaciado interno */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+            text-align: center;
+            margin-bottom: 40px; /* Espaciado entre esta sección y las galerías */
+        }
+
+        .intro-container p {
+            color: #4A148C;
+            font-size: 1.5em;
+        }
+
+        /* Estilos para el contenedor de las imágenes */
+        .collage-container {
+            background-color: #FFFFFF; /* Fondo blanco */
+            border-radius: 10px; /* Bordes redondeados */
+            padding: 20px; /* Espaciado interno */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+        }
+
+        /* Estilo del collage (donde las imágenes se muestran en cuadrícula) */
+        .collage {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+        }
+
+        /* Estilos para las imágenes del collage */
+        .collage img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Efecto al pasar el mouse sobre las imágenes */
+        .collage img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Centrar la quinta imagen en todas las secciones */
+        .collage img:nth-child(5) {
+            grid-column: span 2; /* Ocupa dos columnas */
+        }
+
+        /* Estilos para el botón */
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+        .button-container a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #6A1B9A;
+            color: #FFFFFF;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
+        }
+        .button-container a:hover {
+            background-color: #4A148C;
+        }
+
+        /* Estilos para pantallas medianas (tablets) */
+        @media (min-width: 600px) {
+            .collage {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+
+        /* Estilos para pantallas grandes (escritorio) */
+        @media (min-width: 1024px) {
+            .collage {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+        <h1>Galería Especial</h1>
+    <!-- Sección con fondo blanco al inicio -->
+    <div class="intro-container">
+        <p>SORPRESA aqui esta tu galeria especial,para que veas a tus bebés </p>
+    </div>
+
+    
+
+    <!-- Sección LIA -->
+    <h2>LIA</h2>
+    <div class="collage-container">
+        <div class="collage">
+            <img src="/Fotos/426581006_122123974220174489_1302837961750463265_n.jpg" alt="Foto especial 1">
+            <img src="/Fotos/426581336_122123974052174489_8613585435306606983_n.jpg" alt="Foto especial 2">
+            <img src="/Fotos/426581598_122123974136174489_6645133774219374166_n.jpg" alt="Foto especial 3">
+            <img src="/Fotos/426582730_122123974160174489_8446771331138849325_n.jpg" alt="Foto especial 4">
+        </div>
+    </div>
+
+    <!-- Sección KOMI -->
+    <h2>KOMI</h2>
+    <div class="collage-container">
+        <div class="collage">
+            <img src="/Fotos/430086782_122133544178174489_7088479930932194845_n.jpg" alt="Foto especial 1">
+            <img src="/Fotos/430098151_122133543908174489_5953199458554165700_n.jpg" alt="Foto especial 2">
+            <img src="/Fotos/430107373_122133544088174489_710937977193338116_n.jpg" alt="Foto especial 3">
+            <img src="/Fotos/430853558_122133544136174489_6808540816763438314_n.jpg" alt="Foto especial 4">            
+        </div>
+    </div>
+
+    <!-- Sección KITTY -->
+    <h2>KITTY</h2>
+    <div class="collage-container">
+        <div class="collage">
+            <img src="/Fotos/430085407_122133543626174489_1374136270038162937_n.jpg" alt="Foto especial 1">
+            <img src="/Fotos/430114727_122133544166174489_8482406199401463384_n.jpg" alt="Foto especial 2">
+            <img src="Fotos/432784639_122133544106174489_8263361967582144536_n.jpg" alt="Foto especial 3">
+            <img src="/Fotos/469053471_122213001218174489_6308813952291068144_n.jpg" alt="Foto especial 4">
+        </div>
+    </div>
+
+    <!-- Botón para volver a la página principal -->
+    <div class="button-container">
+        <a href="hola.html">Volver a nuestra galeria</a>
+        <a href="index.html">Volver al inicio</a>
+    </div>
+
+</body>
+</html>

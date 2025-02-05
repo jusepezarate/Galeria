@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Nuestros Momentos</title>
+    <style>
+        /* Fondo animado */
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: 'Georgia', serif;
+            background: linear-gradient(-45deg, #F9E6F8, #EAB8E4, #D18BCF, #B85EB9);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        h1 {
+            text-align: center;
+            color: #6A1B9A;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        /* Contenedores para imagen y texto */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+            text-align: center;
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .container img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+            border-radius: 10px;
+        }
+
+        .text {
+            max-width: 300px;
+            color: #4A148C;
+        }
+
+        .text h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .text p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        /* Estilos para el botón */
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+        .button-container a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #6A1B9A;
+            color: #FFFFFF;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
+        }
+        .button-container a:hover {
+            background-color: #4A148C;
+        }
+
+        /* Estilos para pantallas medianas (tablets) */
+        @media (min-width: 600px) {
+            h1 {
+                font-size: 3em;
+            }
+            .container {
+                flex-direction: row;
+                text-align: left;
+            }
+            .container img {
+                margin-right: 20px;
+                margin-bottom: 0;
+                max-width: 200px;
+            }
+        }
+
+        /* Estilos para pantallas grandes (escritorio) */
+        @media (min-width: 1024px) {
+            .container {
+                max-width: 800px;
+                margin: 0 auto 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Nuestros Momentos Especiales</h1>
+
+    <!-- Contenedores para imagen y texto -->
+    <div class="container">
+        <img src="/Fotos/IMG-20240606-WA0023.jpg" alt="los vasquez" width="200">
+        <div class="text">
+            <h3>Nuestro Día</h3>
+            <p>7 de junio del 2024 el día que te pedí por fin ser mi polola :3</p>
+        </div>
+    </div>
+    <div class="container">
+        <img src="/Fotos/20240804_121809.jpg" alt="Desfile" width="200">
+        <div class="text">
+            <h3>Día del desfile</h3>
+            <p>El día del desfile cuando conociste a mis abuelos y luego fuiste a mi casita yipiii</p>
+        </div>
+    </div>
+    <div class="container">
+        <img src="/Fotos/20241003_192227.jpg" alt="Minecraft" width="200">
+        <div class="text">
+            <h3>Mundo de Minecraft</h3>
+            <p>Cuando empezamos nuestro mundito juntos y me diste la armadura mapuche+</p>
+        </div>
+    </div>
+    <div class="container">
+        <img src="/Fotos/IMG_20241104_200245_035.jpg" alt="Foto" width="200">
+        <div class="text">
+            <h3>Primeras fotos</h3>
+            <p>cuando en religion la kata les presto la tablet y sacaste fotos :3</p>
+        </div>
+    </div>
+    <div class="container">
+        <img src="/Fotos/IMG-20240620-WA0008.jpg" alt="Foto" width="200">
+        <div class="text">
+            <h3>Primera conversaciones sobre el futuro</h3>
+            <p>Recuerdo que fue cuando salimos con la javi y su amigo de 30 años sjjs pero nos fuimos un rato y conversamos que hariamos en el futuro con la relación</p>
+        </div>
+    </div>
+    <div class="container">
+        <img src="/Fotos/IMG-20240912-WA0024.jpg" alt="Foto" width="200">
+        <div class="text">
+            <h3>Gala</h3>
+            <p>Aunque al principio no queria al final si bailamos juntitos en la gala y te veias PRECIOSA</p>
+        </div>
+    </div>
+    <div class="container">
+        <img src="/Fotos/IMG_20240713_060905_510.jpg" alt="Foto" width="200">
+        <div class="text">
+            <h3>Playita</h3>
+            <p>Fuimos con todo el grupito chistoso, ya siendo nosotros pololos y se paso increible nos sacamos hartas fotitos juntos 💕</p>
+        </div>
+    </div>
+    <div class="container">
+        <img src="/Fotos/20241226_231610.jpg" alt="Foto" width="200">
+        <div class="text">
+            <h3>Nos casamos</h3>
+            <p>Hice la iglesia en nuestro mundito exclusivamente para poder casarme con el amor de mi vida osea tu</p>
+        </div>
+    </div>
+    <div class="container">
+        <img src="/Fotos/IMG-20241104-WA0057.jpg" alt="Foto" width="200">
+        <div class="text">
+            <h3>Halloween</h3>
+            <p>Nuestro primer halloween juntos y nuestro disfraz juntitos :3</p>
+        </div>
+    </div>
+    <div class="container">
+        <img src="/Fotos/IMG-20241224-WA0008.jpg" alt="Foto" width="200">
+        <div class="text">
+            <h3>GYM</h3>
+            <p>jsjs recuerdo cuando nos empezamos a tirar agua y quedamos todos mojados(era para la calor)</p>
+        </div>
+    </div>
+    <div class="container">
+        <img src="/Fotos/20241226_154022.jpg" alt="Foto" width="200">
+        <div class="text">
+            <h3>Nuestra última salida juntos :c</h3>
+            <p>Fue la ultima salida que tuvimos solamente los 2 pero fue muy especial y hermosa</p>
+        </div>
+    </div>
+    <div class="container">
+        <img src="/Fotos/image.jpg" alt="Foto" width="200">
+        <div class="text">
+            <h3>Pijamada</h3>
+            <p>Logramos poder tener nuestra noche juntos,fue increible hicimos muchas cosas jsjsjs fue muy hermoso</p>
+        </div>
+    </div>
+    <div class="container">
+        <img src="/Fotos/IMG-20241211-WA0007.jpg" alt="Foto" width="200">
+        <div class="text">
+            <h3>Licenciatura</h3>
+            <p>Pasamos juntos nuestra etapa mas bonita,saliendo del colegio juntitos :3</p>
+        </div>
+    </div>
+    <div class="container">
+        <img src="/Fotos/cum.jpg" alt="Foto" width="200">
+        <div class="text">
+            <h3>Tu cummmmm</h3>
+            <p>Celebrando tu cumpleaños número 18 muy feliz por poder pasar estos momentos junto a ti</p>
+        </div>
+    </div>
+
+
+    <!-- Botón para ir a la galería especial -->
+    <div class="button-container">
+        <a href="pagina2.html">Galería especial</a>
+        <a href="index.html">Volver al inicio</a>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texto Centrado con Fondo Blanco</title>
+    <style>
+        /* Fondo animado */
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: 'Georgia', serif;
+            background: linear-gradient(-45deg, #F9E6F8, #EAB8E4, #D18BCF, #B85EB9);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
+            text-align: center;
+            position: relative;
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Contenedor para el fondo blanco */
+        .content-container {
+            background-color: white; /* Fondo blanco */
+            padding: 40px 60px; /* Espaciado alrededor del texto */
+            border-radius: 15px; /* Bordes redondeados */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+            z-index: 0; /* Asegura que el fondo esté detrás del texto */
+            position: relative; /* Necesario para el posicionamiento absoluto del texto */
+            max-width: 500px; /* Limita el ancho máximo del contenedor */
+            width: 100%;
+        }
+
+        /* Estilos del texto flotante sobre el fondo blanco */
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #6A1B9A; /* Color de texto */
+            position: absolute;
+            top: 10%; /* Coloca el texto más arriba del centro */
+            z-index: 1; /* Asegura que el texto esté sobre el fondo */
+        }
+
+        p {
+            font-size: 1.5em;
+            color: #4A148C; /* Color de texto */
+        }
+
+        /* Estilo para el botón fuera del fondo blanco */
+        .button-container {
+            position: absolute;
+            bottom: -40px; /* El botón estará fuera del fondo blanco */
+            left: 50%;
+            transform: translateX(-50%); /* Centra el botón horizontalmente */
+            margin-top: 20px;
+            z-index: 2; /* Asegura que el botón esté sobre el fondo */
+        }
+
+        .button-container a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #6A1B9A;
+            color: #FFFFFF;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
+        }
+
+        .button-container a:hover {
+            background-color: #4A148C;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>💕Nuestra galeria💕</h1>
+
+    <div class="content-container">
+        <p>Ya 8 meses juntos amorsito aunque ahora estemos a la distancia los regalitos se busca la forma para hacerlos :3 ojala te guste estuve pensando hacerla hace un tiempo y esta tiene un detallito especial muac</p>
+    </div>
+
+    <!-- Botón fuera del fondo blanco -->
+    <div class="button-container">
+        <a href="hola.html">Ingresar a la Galería</a>
+    </div>
+
+</body>
+</html>
